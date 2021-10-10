@@ -8,7 +8,10 @@
 /* eslint-disable no-console */
 
 import { run } from "@xcmats/js-toolbox/utils";
-import { useMemory as useBareMemory } from "mem-box";
+import {
+    useMemory as useBareMemory,
+    share,
+} from "mem-box";
 import packageInfo from "../package.json";
 import "maplibre-gl/dist/maplibre-gl.css";
 
@@ -33,6 +36,8 @@ const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
         container: mapElement,
         style: "https://demotiles.maplibre.org/style.json",
     });
+
+    share({ map });
 
     return map;
 };
@@ -69,6 +74,8 @@ declare global {
     }
 
     // eslint-disable-next-line @typescript-eslint/no-empty-interface
-    interface Ctx { }
+    interface Ctx {
+        map: maplibregl.Map;
+    }
 
 }
