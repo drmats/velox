@@ -8,7 +8,6 @@
 /* eslint-disable no-console */
 
 import { run } from "@xcmats/js-toolbox/utils";
-import maplibre from "maplibre-gl";
 import packageInfo from "../package.json";
 import "maplibre-gl/dist/maplibre-gl.css";
 
@@ -16,7 +15,8 @@ import "maplibre-gl/dist/maplibre-gl.css";
 
 
 // ...
-const setupMap = (mapElement: HTMLElement) => {
+const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
+    const { default: maplibre } = (await import("maplibre-gl"));
     const map = new maplibre.Map({
         accessToken: "",
         container: mapElement,
@@ -36,7 +36,7 @@ run(async () => {
 
     const mapElement = document.getElementById("map");
     if (mapElement) {
-        setupMap(mapElement);
+        await setupMap(mapElement);
     }
 
     console.info(packageInfo.name);
