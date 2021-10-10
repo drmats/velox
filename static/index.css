@@ -10,8 +10,6 @@
 
  html {
     box-sizing: border-box !important;
-    background-color: #123;
-    color: #ddd;
     font-size: 18px;
     font-family: sans-serif;
 }
@@ -25,9 +23,9 @@ body {
     padding: 0;
 }
 
-#app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
 }

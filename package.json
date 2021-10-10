@@ -11,7 +11,8 @@
         }
     ],
     "dependencies": {
-        "@xcmats/js-toolbox": "0.13.2"
+        "@xcmats/js-toolbox": "0.13.2",
+        "maplibre-gl": "1.15.2"
     },
     "description": "Thin web-ui starter.",
     "devDependencies": {
@@ -22,10 +23,12 @@
         "@typescript-eslint/eslint-plugin": "4.33.0",
         "@typescript-eslint/parser": "4.33.0",
         "babel-loader": "8.2.2",
+        "css-loader": "6.4.0",
         "eslint": "7.32.0",
         "eslint-plugin-import": "2.24.2",
         "eslint-webpack-plugin": "3.0.1",
         "rimraf": "3.0.2",
+        "style-loader": "3.3.0",
         "terser-webpack-plugin": "5.2.4",
         "typescript": "4.4.3",
         "webpack": "5.58.1",

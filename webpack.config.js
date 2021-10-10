@@ -81,6 +81,10 @@ module.exports = {
                 loader: "babel-loader",
                 sideEffects: false,
             },
+            {
+                test: /\.(css)$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
 

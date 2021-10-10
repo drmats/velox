@@ -7,7 +7,7 @@ Thin web-ui starter.
 
 
 
-## bare -> base | bare-styled -> base-styled
+## bare -> base | bare-styled -> base-styled -> base-maplibre
 
 * typescript
 * babel
@@ -17,3 +17,4 @@ Thin web-ui starter.
 * base libs:
     - @xcmats/js-toolbox
 * simple `css` + `favicon`
+* mablibre-gl
