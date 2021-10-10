@@ -7,10 +7,11 @@ Thin web-ui starter.
 
 
 
-## bare
+## bare -> bare-styled
 
 * typescript
 * babel
 * eslint
 * webpack
 * webpack-dev-server
+* simple `css` + `favicon`
