@@ -19,6 +19,7 @@ run(async () => {
     if (title) title.innerText = packageInfo.name;
 
     const app = document.createElement("div");
+    app.id = "app";
     app.innerText = packageInfo.name;
 
     const body = document.getElementsByTagName("body");

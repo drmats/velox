@@ -7,7 +7,7 @@ Thin web-ui starter.
 
 
 
-## bare -> base
+## bare -> base | bare-styled -> base-styled
 
 * typescript
 * babel
@@ -16,3 +16,4 @@ Thin web-ui starter.
 * webpack-dev-server
 * base libs:
     - @xcmats/js-toolbox
+* simple `css` + `favicon`
