@@ -37,6 +37,11 @@ const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
         style: "https://demotiles.maplibre.org/style.json",
     });
 
+    map.setMinZoom(2);
+    map.setMaxZoom(9);
+    map.setCenter({ lng: 19.85, lat: 52.06 });
+    map.setZoom(5);
+
     share({ map });
 
     return map;
@@ -73,7 +78,6 @@ declare global {
         velox: Record<string, unknown>;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-interface
     interface Ctx {
         map: maplibregl.Map;
     }
