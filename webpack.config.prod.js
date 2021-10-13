@@ -10,10 +10,12 @@
 
 // ...
 const
+    webpack = require("webpack"),
     { realpathSync } = require("fs"),
     { resolve } = require("path"),
     MinifyPlugin = require("terser-webpack-plugin"),
     ESLintPlugin = require("eslint-webpack-plugin"),
+    { git } = require("./scripts/lib"),
     appName = require("./package.json").name,
     appDirectory = realpathSync(process.cwd());
 
@@ -99,20 +101,16 @@ module.exports = {
 
 
     plugins: [
+        new webpack.EnvironmentPlugin({
+            BABEL_ENV: "production",
+            DEBUG: false,
+            GIT_AUTHOR_DATE: git("log -1 --format=%aI"),
+            GIT_VERSION: git("describe --always"),
+            NODE_ENV: "production",
+        }),
         new ESLintPlugin({
             context: "src",
         }),
     ],
-
-
-    devServer: {
-        static: {
-            directory: resolve(__dirname, "static"),
-        },
-        liveReload: true,
-        hot: false,
-        compress: true,
-        port: 8000,
-    },
 
 };
