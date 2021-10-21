@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="index.css" media="screen" type="text/css">
-    <title>velox</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
     <div id="map"></div>
+    <noscript><%= htmlWebpackPlugin.options.title %> requires js</noscript>
     <script src="velox.js"></script>
-</body>
+</head>
 </html>

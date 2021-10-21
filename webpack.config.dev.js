@@ -14,6 +14,7 @@ const
     { realpathSync } = require("fs"),
     { resolve } = require("path"),
     ESLintPlugin = require("eslint-webpack-plugin"),
+    HtmlWebpackPlugin = require("html-webpack-plugin"),
     { git } = require("./scripts/lib"),
     appName = require("./package.json").name,
     appDirectory = realpathSync(process.cwd());
@@ -99,6 +100,16 @@ module.exports = {
         }),
         new ESLintPlugin({
             context: "src",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            inject: "body",
+            hash: true,
+            minify: false,
+            title: appName,
+            template: resolve(
+                appDirectory, "static/index.template.html",
+            ),
         }),
     ],
 

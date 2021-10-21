@@ -51,7 +51,22 @@ const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
 
 
 /**
- * ...
+ * Run-time available environment variables.
+ */
+export const version = packageInfo.version;
+export const env = {
+    BABEL_ENV: process.env.BABEL_ENV,
+    DEBUG: process.env.DEBUG,
+    GIT_AUTHOR_DATE: process.env.GIT_AUTHOR_DATE,
+    GIT_VERSION: process.env.GIT_VERSION,
+    NODE_ENV: process.env.NODE_ENV,
+};
+
+
+
+
+/**
+ * Entry point.
  */
 run(async () => {
     const title = document.getElementsByTagName("title").item(0);
@@ -62,14 +77,6 @@ run(async () => {
         await setupMap(mapElement);
     }
 
-    window.velox.version = packageInfo.version;
-    window.velox.env = {
-        BABEL_ENV: process.env.BABEL_ENV,
-        DEBUG: process.env.DEBUG,
-        GIT_AUTHOR_DATE: process.env.GIT_AUTHOR_DATE,
-        GIT_VERSION: process.env.GIT_VERSION,
-        NODE_ENV: process.env.NODE_ENV,
-    };
     console.info(packageInfo.name);
 });
 
@@ -81,9 +88,8 @@ run(async () => {
  */
 declare global {
 
-    interface Window {
-        velox: Record<string, unknown>;
-    }
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+    interface Window { }
 
     interface Ctx {
         map: maplibregl.Map;

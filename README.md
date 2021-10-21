@@ -19,3 +19,14 @@ Thin web-ui starter.
     - mem-box
 * simple `css` + `favicon`
 * mablibre-gl
+
+<br />
+
+
+
+
+## license
+
+**velox** is released under the BSD 2-Clause license. See the
+[LICENSE](https://raw.githubusercontent.com/drmats/velox/master/LICENSE)
+for more details.
