@@ -12,8 +12,9 @@ import {
     useMemory as useBareMemory,
     share,
 } from "mem-box";
-import packageInfo from "../package.json";
 import "maplibre-gl/dist/maplibre-gl.css";
+
+import packageInfo from "~/../package.json";
 
 
 
