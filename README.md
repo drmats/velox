@@ -1,20 +1,26 @@
 # velox
 
-Thin web-ui starter.
+Thin web-ui starter (with css).
 
 <br />
 
 
 
 
-## bare -> bare-styled
+## content
+
+### base branch
+
+[velox:bare](https://github.com/drmats/velox/tree/bare)
+
+### configured environments
 
 * typescript
 * babel
 * eslint
 * webpack
 * webpack-dev-server
-* simple `css` + `favicon`
+* simple `css`
 
 <br />
 
