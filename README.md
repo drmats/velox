@@ -1,24 +1,35 @@
 # velox
 
-Thin web-ui starter.
+Thin web-ui starter (with mapping library).
 
 <br />
 
 
 
 
-## bare -> base | bare-styled -> base-styled -> base-maplibre
+## content
+
+### base branch
+
+[velox:base](https://github.com/drmats/velox/tree/base)
+
+### configured environments
 
 * typescript
 * babel
 * eslint
 * webpack
 * webpack-dev-server
-* base libs:
-    - [@xcmats/js-toolbox](https://drmats.github.io/js-toolbox/)
-    - [mem-box](https://drmats.github.io/mem-box/)
-* simple `css` + `favicon`
-* mablibre-gl
+* simple `css`
+
+### base libraries
+
+* [@xcmats/js-toolbox](https://drmats.github.io/js-toolbox/)
+* [mem-box](https://drmats.github.io/mem-box/)
+
+### mapping libraries
+
+* maplibre-gl
 
 <br />
 
