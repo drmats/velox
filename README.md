@@ -11,8 +11,8 @@ Thin web-ui starter (with css and base libs).
 
 ### base branches
 
-[velox:base](https://github.com/drmats/velox/tree/base)
-[velox:bare-styled](https://github.com/drmats/velox/tree/bare-styled)
+* [velox:base](https://github.com/drmats/velox/tree/base)
+* [velox:bare-styled](https://github.com/drmats/velox/tree/bare-styled)
 
 ### configured environments
 
