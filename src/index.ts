@@ -12,6 +12,7 @@ import {
     useMemory as useBareMemory,
     share,
 } from "mem-box";
+import { getProcess } from "@xcmats/js-toolbox/utils";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 import packageInfo from "~/../package.json";
@@ -56,11 +57,9 @@ const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
  */
 export const version = packageInfo.version;
 export const env = {
-    BABEL_ENV: process.env.BABEL_ENV,
-    DEBUG: process.env.DEBUG,
+    ...getProcess().env,
     GIT_AUTHOR_DATE: process.env.GIT_AUTHOR_DATE,
     GIT_VERSION: process.env.GIT_VERSION,
-    NODE_ENV: process.env.NODE_ENV,
 };
 
 
