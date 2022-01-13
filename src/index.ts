@@ -9,7 +9,7 @@
 
 import { run } from "@xcmats/js-toolbox/utils";
 import {
-    useMemory as useBareMemory,
+    useMemory,
     share,
 } from "mem-box";
 import { getProcess } from "@xcmats/js-toolbox/utils";
@@ -23,7 +23,7 @@ import packageInfo from "~/../package.json";
 /**
  * Type-safe instance of useMemory.
  */
-export const useMemory: (() => Ctx) = useBareMemory;
+export const appMemory: (() => Ctx) = useMemory;
 
 
 
