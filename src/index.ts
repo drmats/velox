@@ -34,7 +34,6 @@ export const appMemory: (() => Ctx) = useMemory;
 const setupMap = async (mapElement: HTMLElement): Promise<maplibregl.Map> => {
     const { default: maplibre } = (await import("maplibre-gl"));
     const map = new maplibre.Map({
-        accessToken: "",
         container: mapElement,
         style: "https://demotiles.maplibre.org/style.json",
     });
